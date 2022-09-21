@@ -9,5 +9,15 @@ module.exports = {
             console.log(err)
         }
     },
+    getFlashesMap: async (req,res) => {
+        try {
+            const flashes = await Flash.find({map: req.params.map})
+            console.log(flashes)
+            // res.render('../maps/' + req.params.map +'.ejs', {flashes: flashes})
+            res.render('flashes.ejs', {flashes: flashes})
+        } catch (err) {
+            console.log(err)
+        }
+    }
     
 }
