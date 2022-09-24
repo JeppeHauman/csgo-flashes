@@ -18,6 +18,18 @@ module.exports = {
         } catch (err) {
             console.log(err)
         }
+    },
+    createFlash: async (req,res) => {
+        try {
+            await Flash.create({
+                link: req.body.link,
+                map: req.body.map,
+                ctFlash: req.body.ctFlash,
+                desc: req.body.desc
+            })
+        } catch (err) {
+            console.log(err)
+        }
     }
     
 }

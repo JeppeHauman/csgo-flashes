@@ -6,4 +6,6 @@ router.get('/', flashesController.getFlashes)
 
 router.get('/:map', flashesController.getFlashesMap)
 
+router.post('/createFlash', flashesController.createFlash)
+
 module.exports = router

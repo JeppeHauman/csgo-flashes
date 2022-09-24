@@ -1,7 +1,36 @@
 <%- include('partials/header') -%>
 
 
-<h1><%= flashes[0].map %></h1>
+<% if(!flashes[0]) { %>
+    <p>There are no flashes added for this map</p>
+<% } %>
+<% if(flashes[0]) { %>
+    <h1><%= flashes[0].map %></h1>
+<% } %>
+
+<div class="container overflow-hidden">
+    <div class="row gy-3">
+        <% flashes.forEach(fl => { %>
+            <div class="col-3">
+                <div class="p-3 border bg-light <%=fl.map%>"><%= fl.desc %> </div>
+            </div>
+        <% }) %>
+        <div class="col-3">
+            <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-3">
+            <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-3">
+            <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+        <div class="col-3">
+            <div class="p-3 border bg-light">Custom column padding</div>
+        </div>
+    </div>
+  </div>
+
+
 
 
 <%- include('partials/footer') -%>

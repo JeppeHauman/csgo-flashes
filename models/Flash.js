@@ -12,6 +12,10 @@ const FlashSchema = new mongoose.Schema({
     ctFlash: {
         type: Boolean,
         required: true,
+    },
+    desc: {
+        type: String,
+        required: true
     } 
 }, {collection: 'flashes'})
 
