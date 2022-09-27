@@ -21,14 +21,16 @@ module.exports = {
     },
     createFlash: async (req,res) => {
         try {
+            console.log(req.body)
             await Flash.create({
                 link: req.body.link,
                 map: req.body.map,
-                ctFlash: req.body.ctFlash,
+                ctFlash: true,
                 desc: req.body.desc
             })
+            res.redirect('/flashes')
         } catch (err) {
-            console.log(err)
+            //console.log(err)
         }
     }
     

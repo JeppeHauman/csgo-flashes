@@ -1,6 +1,53 @@
 <%- include('partials/header') -%>
 
-    <h1>Flashes</h1>
+    <h1 class="title">Flashes</h1>
+    <div class="container new-flash">
+        <h3>Add new flash</h3>
+        <form action="/flashes/createFlash" method="POST">
+            <select class="form-select" name="map">
+                <option selected disabled value="">Choose map</option>
+                <option value="ancient">Ancient</option>
+                <option value="dust2">Dust II</option>
+                <option value="inferno">Inferno</option>
+                <option value="mirage">Mirage</option>
+                <option value="nuke">Nuke</option>
+                <option value="overpass">Overpass</option>
+                <option value="vertigo">Vertigo</option>
+            </select>
+
+            <div class="col-md-12">
+                <input class="form-control" type="text" name="link" placeholder="Youtube link">
+             </div>
+
+            <div class="col-md-12">
+                <input class="form-control" type="text" name="desc" placeholder="Short description">
+             </div>
+
+             <div class="col-md-12 mt-3">
+                <label class="mb-3 mr-1" for="side">Side: </label>
+
+                <input type="radio" class="btn-check" name="side" id="ct" autocomplete="off">
+                <label class="btn btn-sm btn-outline-secondary" for="ct">CT</label>
+
+                <input type="radio" class="btn-check" name="side" id="t" autocomplete="off">
+                <label class="btn btn-sm btn-outline-secondary" for="t">T</label>
+
+             </div>
+
+             
+            <button type="submit" class="btn btn-primary">Add flash</button>
+            
+        </form>
+
+        <!-- <form action="/flashes/createFlash" method="post">
+
+        </form> -->
+
+          
+    
+
+
+
     <table class="table table-striped table-dark">
         <tbody>
         <% flashes.forEach( el => { %>

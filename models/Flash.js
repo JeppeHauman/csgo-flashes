@@ -1,4 +1,4 @@
-const mongoose = require( 'mongoose')
+const mongoose = require('mongoose')
 
 const FlashSchema = new mongoose.Schema({
     link: {
@@ -17,6 +17,6 @@ const FlashSchema = new mongoose.Schema({
         type: String,
         required: true
     } 
-}, {collection: 'flashes'})
+})
 
 module.exports = mongoose.model('Flash', FlashSchema)
