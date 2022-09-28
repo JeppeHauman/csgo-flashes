@@ -5,57 +5,18 @@
 <div class="album py-5 bg-light">
   <div class="container">
     <div class="row gy-10">
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <a href="">
-            <img class="card-img-top" src="/img/inferno.jpg" alt="">
-          </a>
-          <div class="card-body">
-            <p class="card-text">boiler to stairs</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card md-4 box-shadow">
-          <a href="">
-            <img class="card-img-top" src="/img/inferno.jpg" alt="">
-          </a>
-          <div class="card-body">
-            <p class="card-text">boiler to stairs</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card md-4 box-shadow">
-          <a href="">
-            <img class="card-img-top" src="/img/inferno.jpg" alt="">
-          </a>
-          <div class="card-body">
-            <p class="card-text">boiler to stairs</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card md-4 box-shadow">
-          <a href="">
-            <img class="card-img-top" src="/img/inferno.jpg" alt="">
-          </a>
-          <div class="card-body">
-            <p class="card-text">boiler to stairs</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card md-4 box-shadow">
-          <a href="">
-            <img class="card-img-top" src="/img/inferno.jpg" alt="">
-          </a>
-          <div class="card-body">
-            <p class="card-text">boiler to stairs</p>
-          </div>
-        </div>
-      </div>
-
+      <% flashes.forEach(fl => { %>
+          <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <a href="<%=fl.link%>">
+                  <img class="card-img-top" src="/img/<%=fl.map%>.jpg" alt="map">
+                </a>
+                <div class="card-body">
+                  <p class="card-text"><%= fl.desc %></p>
+                </div>
+              </div>
+            </div>
+      <% }) %>                     
     </div>
   </div>
 </div>

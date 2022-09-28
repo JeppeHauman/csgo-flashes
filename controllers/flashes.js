@@ -25,7 +25,7 @@ module.exports = {
             await Flash.create({
                 link: req.body.link,
                 map: req.body.map,
-                ctFlash: true,
+                ctFlash: req.body.ctFlash,
                 desc: req.body.desc
             })
             res.redirect('/flashes')

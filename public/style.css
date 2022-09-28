@@ -20,6 +20,9 @@
 .container.new-flash{
     max-width: 50rem;
 }
+.container.width-50 {
+  max-width: 50rem;
+}
 .container.new-flash * {
     margin: 1rem 0;
 }

@@ -5,31 +5,37 @@
     <p>There are no flashes added for this map</p>
 <% } %>
 <% if(flashes[0]) { %>
-    <h1 class="title"><%= flashes[0].map %></h1>
+    <h1 class="title"><%= flashes[0].map.toUpperCase() %></h1>
 <% } %>
 
-<div class="container overflow-hidden">
+<!-- <div class="container overflow-hidden">
     <div class="row gy-3">
         <% flashes.forEach(fl => { %>
             <div class="col-3">
                 <div class="p-3 border bg-light <%=fl.map%>"><%= fl.desc %> </div>
             </div>
         <% }) %>
-        <div class="col-3">
-            <div class="p-3 border bg-light">Custom column padding</div>
-        </div>
-        <div class="col-3">
-            <div class="p-3 border bg-light">Custom column padding</div>
-        </div>
-        <div class="col-3">
-            <div class="p-3 border bg-light">Custom column padding</div>
-        </div>
-        <div class="col-3">
-            <div class="p-3 border bg-light">Custom column padding</div>
-        </div>
+    </div>
+  </div> -->
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row gy-10">
+        <% flashes.forEach(fl => { %>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                  <a href="<%=fl.link%>">
+                    <img class="card-img-top" src="/img/<%=fl.map%>.jpg" alt="map">
+                  </a>
+                  <div class="card-body">
+                    <p class="card-text"><%= fl.desc %></p>
+                  </div>
+                </div>
+              </div>
+        <% }) %>                     
+      </div>
     </div>
   </div>
-
 
 
 
